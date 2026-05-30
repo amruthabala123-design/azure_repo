@@ -179,7 +179,7 @@
 										}
 									}
 								},
-								"enableLogging": true,
+								"enableLogging": false,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
@@ -210,7 +210,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "@select max(@{pipeline().parameters.cdc_col}) from @{pipeline().parameters.schema}.@{pipeline().parameters.table}",
+											"value": "select max(@{pipeline().parameters.cdc_col}) from @{pipeline().parameters.schema}.@{pipeline().parameters.table}",
 											"type": "Expression"
 										}
 									}
